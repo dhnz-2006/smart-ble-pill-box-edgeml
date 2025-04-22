@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  nav {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav .left {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  nav .right {
+    font-size: 1rem;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .table-box {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  th, td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .heart-rate {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #dc3545;
+  }
+  
+  .message-box {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    border-left: 4px solid #007bff;
+    position: sticky;
+    top: 10px;
+  }
+  
+  .message-box h3 {
+    margin-top: 0;
+    color: #007bff;
+  }
+  
+  .message-box p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .refresh-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .refresh-btn:hover {
+    background-color: #218838;
+  }
+  
+  .delete-link {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .delete-link:hover {
+    text-decoration: underline;
+  }
+  

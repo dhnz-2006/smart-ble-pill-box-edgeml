@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Medicine</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    nav {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .left {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    nav .right {
+      font-size: 1rem;
+    }
+
+    .content-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .form-box {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .form-box h1 {
+      margin-top: 0;
+      color: #007bff;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .warning {
+      color: red;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 1rem;
+      text-align: center;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="left">Add Medicine</div>
+    <div class="right">
+      <a href="{{ url_for('index') }}" style="color:white; text-decoration:none;">Dashboard</a>
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="form-box">
+      <h1>Medicine</h1>
+      <form method="POST">
+        <label>Box Number:</label>
+        <input type="number" name="box" required><br><br>
+
+        <label>Medicine Name:</label>
+        <input type="text" name="name" required><br><br>
+        <center>
+            {% if warning %}
+              <p class="warning">{{ warning }}</p>
+            {% endif %}</center>
+
+        <button type="submit">Save</button>
+      </form>
+
+      <a href="{{ url_for('index') }}" class="back-link">Back</a>
+    </div>
+  </div>
+
+</body>
+</html>
